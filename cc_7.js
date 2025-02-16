@@ -32,3 +32,15 @@ const calculateLoyaltyDiscount = (amount, years) => { // arrow function for the 
 
 calculateLoyaltyDiscount(100, 6); 
 calculateLoyaltyDiscount(200, 2); 
+
+// Task 4- Parameters and Arguments 
+
+
+
+
+
+
+
+
+
+

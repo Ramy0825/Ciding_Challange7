@@ -61,3 +61,15 @@ const filterHighValueTransactions = (transactions, filterFunction) => {
 };
 console.log(filterHighValueTransactions(transactions, amount => amount > 1000));
 
+
+// Task 7 - Closures 
+function createBudgetTracker() {
+    let balance = 0;
+    return function(amount) {
+        balance -= amount;
+        console.log(`Current Balance: -$${balance}`);
+    };
+}
+let budget = createBudgetTracker();
+budget(300); // Expected output: "Current Balance: -$300"
+budget(200); // Expected output: "Current Balance: -$500"

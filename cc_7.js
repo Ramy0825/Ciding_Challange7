@@ -44,3 +44,11 @@ calculateLoyaltyDiscount(200, 2);
 
 
 
+
+//Task 5 - Returning Values 
+function calculateLoanInterest(principal, rate, years) { // calculate and make a function Loanintrest 
+    let interest = principal * rate * years;
+    console.log(`Total Interest: $${interest}`); // log in the consle 
+}
+calculateLoanInterest(1000, 0.05, 3); // Expected output: "Total Interest: $150.00"
+calculateLoanInterest(5000, 0.07, 5); // Expected output: "Total Interest: $1750.00"

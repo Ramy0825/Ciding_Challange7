@@ -34,18 +34,28 @@ calculateLoyaltyDiscount(100, 6); // Expected output: "Discounted Price: $85.00"
 calculateLoyaltyDiscount(200, 2); // Expected output: "Discounted Price: $190.00"
 
 // Task 4- Parameters and Arguments 
+function calculateShippingCost(weight, location, expedited = false) {
+    let cost;
+
+    if (location === "USA") {
+        cost = 5 + (0.5 * weight);
+    } else if (location === "Canada") {
+        cost = 10 + (0.7 * weight);
+    }
+
+    if (expedited) {
+        cost += 10;
+    }
+
+    console.log(`Shipping Cost: $${cost}`);
+}
+
+calculateShippingCost(10, "USA", true); // Expected output: "Shipping Cost: $20"
+calculateShippingCost(5, "Canada", false); // Expected output: "Shipping Cost: $13.5"
 
 
 
-
-
-
-
-
-
-
-
-//Task 5 - Returning Values 
+    //Task 5 - Returning Values 
 function calculateLoanInterest(principal, rate, years) { // calculate and make a function Loanintrest 
     let interest = principal * rate * years;
     console.log(`Total Interest: $${interest}`); // log in the consle 

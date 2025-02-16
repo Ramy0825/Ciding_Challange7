@@ -7,7 +7,7 @@ function calculateInvoice(subtotal, taxRate, discount) {     //declare a functio
 calculateInvoice(100, 0.08, 5);     
 calculateInvoice(500, 0.1, 20);
 
-// task2 - function express
+// Task 2 - Function Express
 const calculateHourlyWage = function (salary, hoursPerWeek) {  // make a constant function to calculate hour wage 
     let hourlyWage = salary / (hoursPerWeek * 52);
     console.log(`Hourly Wage: $${hourlyWage}`);  // log it into consolw 
@@ -30,8 +30,8 @@ const calculateLoyaltyDiscount = (amount, years) => { // arrow function for the 
     console.log(`Discounted Price: $${discountedPrice}`);
 };
 
-calculateLoyaltyDiscount(100, 6); 
-calculateLoyaltyDiscount(200, 2); 
+calculateLoyaltyDiscount(100, 6); // Expected output: "Discounted Price: $85.00"
+calculateLoyaltyDiscount(200, 2); // Expected output: "Discounted Price: $190.00"
 
 // Task 4- Parameters and Arguments 
 
@@ -73,3 +73,20 @@ function createBudgetTracker() {
 let budget = createBudgetTracker();
 budget(300); // Expected output: "Current Balance: -$300"
 budget(200); // Expected output: "Current Balance: -$500"
+
+// Task 8 - Recursion in JavaScript
+function calculateGrowth(years, revenue) {
+    if (years <= 0) {
+        return revenue;
+    }
+    if (years > 10) {
+        return revenue;
+    }
+    revenue += revenue * 0.05;
+    return calculateGrowth(years - 1, revenue);
+}
+console.log(`Projected Revenue: $${calculateGrowth(8, 1000)}`);
+console.log(`Projected Revenue: $${calculateGrowth(5, 5000)}`);
+
+calculateGrowth(8, 1000); // Expected output: "Projected Revenue: $1102.50"
+calculateGrowth(5, 5000); // Expected output: "Projected Revenue: $6381.41"
